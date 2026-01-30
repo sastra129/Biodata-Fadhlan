@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil — Desain Modern</title>
+
+  <style>
+    /* ====== Variabel Warna ====== */
+    :root{
+      --bg:#006666;
+      --card:#07575b;
+      --accent:#FAEBD7;
+      --accent2:#c4dfe6;
+      --text:#F5F5DC;
+      --muted:#FAEBD7;
+      --radius:18px;
+    }
+
+    /* ====== Global ====== */
+    body{
+      margin:0;
+      font-family: "Poppins", Time New Roman;
+      background: radial-gradient(circle at 20% 20%, rgba(0,212,255,0.1), transparent), var(--bg);
+      color:var(--text);
+      padding:40px 20px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .container{
+      max-width:900px;
+      width:100%;
+    }
+
+    /* ====== Header Profil ====== */
+    .profile-card{
+      background#FFFDDO;
+      padding:30px;
+      border-radius:var(--radius);
+      text-align:center;
+      box-shadow:0 10px 30px rgba(0,0,0,0.4);
+      animation:fadeIn .6s ease-out;
+    }
+
+    @keyframes fadeIn{
+      from{opacity:0; transform:translateY(20px);} to{opacity:1; transform:translateY(0);}
+    }
+
+    .avatar{
+      width:200px;
+      height:200px;
+      border-radius:50%;
+      margin:auto;
+      background-size:cover;
+      background-position:center;
+      border:4px solid var(--accent);
+      box-shadow:0 0 20px rgba(0,212,255,0.4);
+    }
+
+    h1{
+      margin:20px 0 5px;
+      font-size:32px;
+      font-weight:700;
+    }
+
+    .role{
+      color:var(--accent);
+      font-weight:600;
+      font-size:16px;
+    }
+
+    p.bio{
+      margin-top:15px;
+      color:var(--muted);
+      line-height:1.6;
+      font-size:15px;
+    }
+
+    /* ====== Social Buttons ====== */
+    .social{
+      margin-top:25px;
+      display:flex;
+      justify-content:center;
+      gap:14px;
+    }
+
+    .social a{
+      padding:10px 16px;
+      background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+      color:#FAF9F6;
+      border-radius:12px;
+      font-weight:700;
+      text-decoration:none;
+      box-shadow:0 4px 10px rgba(0,212,255,0.2);
+      transition:transform .25s;
+    }
+
+    .social a:hover{
+      transform:translateY(-4px);
+    }
+
+    /* ====== Bagian Detail ====== */
+    .section{
+      background:900CC;
+      padding:20px 24px;
+      border-radius:var(--radius);
+      margin-top:26px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.35);
+    }
+
+    .section h2{
+      margin:0 0 10px;
+      font-size:22px;
+      font-weight:700;
+    }
+
+    .list{
+      list-style:none;
+      padding:0;
+      margin:0;
+    }
+
+    .list li{
+      padding:10px 0;
+      border-bottom:1px solid rgba(255,255,255,0.06);
+      color:FFFDD0;
+      font-size:15px;
+    }
+
+    .list li:last-child{border-bottom:none}
+
+    /* ====== Responsif ====== */
+    @media(max-width:600px){
+      .profile-card{padding:22px}
+      h1{font-size:24px}
+      .avatar{width:110px;height:110px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- PROFIL UTAMA -->
+    <div class="profile-card">
+      <div class="avatar" style="background-image:url('foto.jpeg');"></div>
+	
+      <h1>Muhamad Fadhlan Putra Sastra</h1>
+      <div class="role">Designer & Seorang Pecinta Langit Malam</div>
+
+      <p class="bio">
+        Saya adalah Designer dengan fokus pada tampilan modern Dan Futuristik, 
+        Memiliki pengalaman Mendesain untuk Istansi Pemerintah, Hobi Saya Adalah Merasakan ketenangan di Malam Hari
+      </p>
+
+      <div class="social">
+        <a href="https://wa.me/6285717092605" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/fadhlan_putr?igsh=cHQ0M3lqODVycDVh" target="_blank">Instagram</a>
+        <a href="https://maps.app.goo.gl/PCWEHz9dZuMmS4HR8"target= "_blank">Location</a>
+      </div>
+    </div> 
+
+    <!-- KEAHLIAN -->
+    <div class="section">
+      <h2>Keahlian</h2>
+      <ul class="list">
+        <li>Photoshop & CorelDraw</li>
+        <li>Premiere Pro & CapCut</li>
+        <li>Fotografi Dan Manipulasi Gambar</li>
+        <li>Cooking</li>
+      </ul>
+    </div>
+
+    <!-- PENGALAMAN -->
+    <div class="section">
+      <h2>Pengalaman</h2>
+      <ul class="list">
+        <li>Freelance Desain — 2025 - Sekarang</li>
+        <li>Fotografi Langit Malam</li>
+        <li>PKL di Instansi Percetakan</li>
+      </ul>
+	 </div>
+
+  </div>
+</body>
+</html>
