@@ -25,29 +25,38 @@
         header p {
             opacity: 0.9;
         }
-
+		
+		/* 1. Ubah gallery dari grid menjadi tumpukan vertikal */
         .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            padding: 30px;
+            display: flex;
+            flex-direction: column; 
+            align-items: center;    /* Agar gambar berada di tengah */
+            gap: 30px;             /* Jarak antar gambar */
+            padding: 20px;
+            max-width: 600px;      /* Membatasi lebar agar tetap proporsional di HP/Laptop */
+            margin: 0 auto;        /* Mengetengahkan container gallery */
         }
 
-       .item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
-    cursor: pointer;
-    height: 260px;   /* TAMBAH INI */
-}
+        /* 2. Sesuaikan item (hapus fixed height) */
+        .item {
+            position: relative;
+            width: 100%;           /* Lebar penuh mengikuti container */
+            overflow: hidden;
+            border-radius: 25px;   /* Sudut lebih melengkung seperti Foto 2 */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            cursor: pointer;
+        }
 
+        /* 3. Pastikan gambar mengikuti proporsi aslinya (tidak terpotong) */
         .item img {
             width: 100%;
-            height: 100%;
-			display: block;
+            height: auto;          /* HAPUS height: 100% agar foto tidak gepeng/terpotong */
+            display: block;
             transition: transform 0.4s ease;
         }
+
+      
+   
 
         .item span {
             position: absolute;
