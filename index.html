@@ -135,10 +135,22 @@
     .list li:last-child{border-bottom:none}
 
     /* ====== Responsif ====== */
-    @media(max-width:600px){
-      .profile-card{padding:22px}
-      h1{font-size:24px}
-      .avatar{width:110px;height:110px}
+   @media (max-width: 600px) {
+
+  .social a{
+    padding:8px 14px;     /* sebelumnya mungkin 12px 25px */
+    font-size:13px;       /* kecilkan teks */
+    border-radius:20px;   /* biar tetap smooth */
+  }
+
+  .social{
+    gap:10px;             /* jarak antar tombol */
+  }
+  .social a{
+  min-height:auto;
+}
+
+}
     }
   </style>
 </head>
