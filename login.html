@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Login Fadhlan</title>
+    <style>
+        /* Mengatur tampilan dasar */
+        body {
+            font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+           background: linear-gradient(to bottom right, #3f87a6, #ebf8e1, #f69d3c);
+
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Kotak login */
+        .login-container {
+            background-color: #339999;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #FFEBCD;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Styling Input */
+        .input-group {
+            margin-bottom: 1rem;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #FFEBCD;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box; /* Agar padding tidak merusak lebar */
+        }
+
+        /* Tombol Login */
+        .login-btn {
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            background-color: #A87C2D;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .footer-text {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #FFEBCD;
+        }
+    </style>
+</head>
+<script>
+function loginUser() {
+    // Username & Password default
+    const defaultUsername = "sastra";
+    const defaultPassword = "12345";
+
+    // Ambil input dari form
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    // Cek login
+    if (username === defaultUsername && password === defaultPassword) {
+        alert("Login berhasil!");
+        window.location.href = "Galery .html"; // pindah ke halaman galeri
+        return false;
+    } else {
+        alert("Username atau Password salah!");
+        return false;
+    }
+}
+</script>
+<body>
+
+<div class="login-container">
+    <h2>Selamat Datang</h2>
+    <form onsubmit="return loginUser()">
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="username=sastra" required>
+        </div>
+        
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="password=12345" required>
+        </div>
+
+        <button type="submit" class="login-btn">Masuk</button>
+    </form>
+	
+	
+    
+    <div class="footer-text">
+        Belum punya akun? <a href="#">Daftar di sini</a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Beranda Galeri Fadhlan</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Poppins, sans-serif;
+            background: linear-gradient(180deg, #000428 0%, #004e92 100%);
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            opacity: 0.9;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+
+       .item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+    height: 260px;   /* TAMBAH INI */
+}
+
+        .item img {
+            width: 100%;
+            height: 100%;
+			display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .item span {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background: rgba(0,0,0,0.6);
+            font-weight: bold;
+            transform: translateY(100%);
+            transition: 0.4s;
+        }
+
+        .item:hover img {
+            transform: scale(1.2) rotate(2deg);
+        }
+
+        .item:hover span {
+            transform: translateY(0);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🎨 Galeri Foto Astrophile 🌠</h1>
+    <p>Kumpulan foto terbaik yang saya abadikan dengan Hp 1 jutaan 👀</p>
+</header>
+
+<section class="gallery">
+    <div class="item">
+        <img src="orion new.jpeg">
+        <span>Foto 1</span>
+    </div>
+    <div class="item">
+        <img src="Canis Major.jpeg">
+        <span>Foto 2</span>
+    </div>
+    <div class="item">
+        <img src="Hercules.jpeg">
+        <span>Foto 3</span>
+    </div>
+    <div class="item">
+        <img src="awan.jpeg">
+        <span>Foto 4</span>
+    </div>
+    <div class="item">
+        <img src="Pak Andri .jpeg">
+        <span>Foto 5</span>
+    </div>
+    <div class="item">
+        <img src="moon.jpeg">
+        <span>Foto 6</span>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Galeri @fadhlan_putr</p>
+</footer>
+
+</body>
+</html>
