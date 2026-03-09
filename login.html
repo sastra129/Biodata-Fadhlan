@@ -82,18 +82,16 @@
 </head>
 <script>
 function loginUser() {
-    // Username & Password default
+
     const defaultUsername = "sastra";
     const defaultPassword = "12345";
 
-    // Ambil input dari form
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
 
-    // Cek login
     if (username === defaultUsername && password === defaultPassword) {
         alert("Login berhasil!");
-        window.location.href = "Galery.html"; // pindah ke halaman galeri
+        window.location.href = "galery.html";
         return false;
     } else {
         alert("Username atau Password salah!");
