@@ -92,9 +92,17 @@
     <h1>🎨 Galeri Foto Astrophile 🌠</h1>
     <p>Kumpulan foto terbaik yang saya abadikan dengan Hp 1 jutaan 👀</p>
 	<h2>🎵 Offical Music : Ed Sheeran-Photograph</h2>
-	<audio autoplay loop hidden>
-  <source src="Ed Sheeran .mpeg" type="audio/mpeg">
+<audio id="music" loop>
+<source src="Ed Sheeran .mpeg" type="audio/mp3">
 </audio>
+
+<button onclick="playMusic()">Play Music</button>
+
+<script>
+function playMusic(){
+    document.getElementById("music").play();
+}
+</script>
 </header>
 
 <section class="gallery">
